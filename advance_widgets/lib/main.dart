@@ -1,7 +1,7 @@
-import 'package:animation_demo/AnimatedCrossFade.dart';
-import 'package:animation_demo/AnimatedOpacity.dart';
-import 'package:animation_demo/FooAnimation.dart';
-import 'package:animation_demo/HeroAnimation.dart';
+import 'package:advance_widgets/clip_rrect.dart';
+import 'package:advance_widgets/gradiant.dart';
+import 'package:advance_widgets/list_wheel.dart';
+import 'package:advance_widgets/mapping_lists.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -19,11 +19,11 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      // home: Fooanimation(),
-      // home: AnimatedOpacityScreen(),
-      // home: AnimatedCrossFadeScreen(),
-      home: HeroAnimationScreen(),
-      // home: const MyHomePage(title: 'Animations'),
+      home: MappingListScreen(),
+      // home: GradiantScreen(),
+      // home: ClipRrectScreen(),
+      // home: ListWheelScreen(),
+      // home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
 }
@@ -31,6 +31,7 @@ class MyApp extends StatelessWidget {
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
   final String title;
+
   @override
   State<MyHomePage> createState() => _MyHomePageState();
 }
@@ -43,7 +44,8 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
       ),
-      body:Text("data")
+      body:
+          Center(), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
